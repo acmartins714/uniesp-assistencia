@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 @Table(name = "orcamentos")
-public class Orcamento {
+public class OrcamentoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,7 @@ public class Orcamento {
     @Column(name="validade", nullable = false, columnDefinition = "TIMESTAMP")
     private LocalDate validade;
 
-    public Orcamento(BigDecimal valorMaoObra, BigDecimal valorPecas, int status, LocalDate validade) {
+    public OrcamentoEntity(BigDecimal valorMaoObra, BigDecimal valorPecas, int status, LocalDate validade) {
         this.valorMaoObra = valorMaoObra;
         this.valorPecas = valorPecas;
         this.status = status;

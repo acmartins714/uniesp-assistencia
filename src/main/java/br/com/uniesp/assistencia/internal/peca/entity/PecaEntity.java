@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Getter
 @NoArgsConstructor
 @Table(name = "pecas")
-public class Peca {
+public class PecaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +31,7 @@ public class Peca {
     @Range(min = 0)
     private int estoque;
 
-    public Peca(String nome, int codigo, BigDecimal preco, int estoque) {
+    public PecaEntity(String nome, int codigo, BigDecimal preco, int estoque) {
         this.nome = nome;
         this.codigo = codigo;
         this.preco = preco;

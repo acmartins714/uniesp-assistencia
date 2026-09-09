@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Table(name = "anexos")
-public class Anexo {
+public class AnexoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Anexo {
     @Column(name="storagekey", columnDefinition = "TEXT", nullable = false, length = 30)
     private String storagekey;
 
-    public Anexo(String nome, String tipo, int tamanho, String storagekey) {
+    public AnexoEntity(String nome, String tipo, int tamanho, String storagekey) {
         this.nome = nome;
         this.tipo = tipo;
         this.tamanho = tamanho;

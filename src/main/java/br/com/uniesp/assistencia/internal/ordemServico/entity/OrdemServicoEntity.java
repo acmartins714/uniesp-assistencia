@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Entity
 @NoArgsConstructor
 @Table(name = "ordensservico")
-public class OrdemServico {
+public class OrdemServicoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,7 +30,7 @@ public class OrdemServico {
     @Column(name="descricaodefeito", nullable = false, columnDefinition = "TEXT", length = 250)
     private String descricaoDefeito;
 
-    public OrdemServico(int status, int prioridade, LocalDate dataAbertura, LocalDate dataConclusao, String descricaoDefeito) {
+    public OrdemServicoEntity(int status, int prioridade, LocalDate dataAbertura, LocalDate dataConclusao, String descricaoDefeito) {
         this.status = status;
         this.prioridade = prioridade;
         this.dataAbertura = dataAbertura;

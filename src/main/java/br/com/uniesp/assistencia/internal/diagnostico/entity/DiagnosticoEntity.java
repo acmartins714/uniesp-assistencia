@@ -3,7 +3,6 @@ package br.com.uniesp.assistencia.internal.diagnostico.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Range;
 
 import java.time.LocalDate;
 
@@ -11,7 +10,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 @Table(name = "diagnosticos")
-public class Diagnostico {
+public class DiagnosticoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +25,7 @@ public class Diagnostico {
     @Column(name="data", nullable = false, columnDefinition = "TIMESTAMP")
     private LocalDate data;
 
-    public Diagnostico(String descricao, String observacoes, LocalDate data) {
+    public DiagnosticoEntity(String descricao, String observacoes, LocalDate data) {
         this.descricao = descricao;
         this.observacoes = observacoes;
         this.data = data;

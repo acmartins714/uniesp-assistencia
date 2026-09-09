@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Table(name = "tecnicos")
-public class Tecnico {
+public class TecnicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,7 @@ public class Tecnico {
     @Column(name = "ativo", nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
     private boolean status;
 
-    public Tecnico(String nome, String especialidade, boolean status) {
+    public TecnicoEntity(String nome, String especialidade, boolean status) {
         this.nome = nome;
         this.especialidade = especialidade;
         this.status = status;

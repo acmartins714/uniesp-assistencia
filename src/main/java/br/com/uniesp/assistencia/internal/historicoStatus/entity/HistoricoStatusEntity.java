@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 @Table(name = "historicosstatus")
-public class HistoricoStatus {
+public class HistoricoStatusEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +28,7 @@ public class HistoricoStatus {
     @Column(name="data", nullable = false, columnDefinition = "TIMESTAMP")
     private LocalDate dataConclusao;
 
-    public HistoricoStatus(int statusAnterior, int statusNovo, LocalDate dataConclusao) {
+    public HistoricoStatusEntity(int statusAnterior, int statusNovo, LocalDate dataConclusao) {
         this.statusAnterior = statusAnterior;
         this.statusNovo = statusNovo;
         this.dataConclusao = dataConclusao;
