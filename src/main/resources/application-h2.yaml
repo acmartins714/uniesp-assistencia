@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: assistencia-uniesp
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:file:~/assistencia
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      # ddl auto (create, create-drop, validate, update)
+      # ddl-auto: update
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql: true
+
+# Configurações de erro
+server:
+  port: 5001
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: false
+
+# Integração ViaCEP
+viacep:
+  url: https://viacep.com.br/ws
+
+# Integração BrasilApi
+brasilapi:
+  url: https://brasilapi.com.br
+
+# Integração Receita Federal do Brasil
+receitafederal:
+  url: https://receitaws.com.br

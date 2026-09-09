@@ -1,0 +1,40 @@
+  spring:
+    application:
+      name: assistencia-uniesp
+    datasource:
+      url: jdbc:postgresql://localhost:5432/assistencia-uniesp
+      username: postgres
+      password: heg5883
+      driver-class-name: org.postgresql.Driver
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      hibernate:
+        # ddl auto: create, create-drop, validate, update, none
+        # ddl-auto: validate
+        # ddl-auto: update
+        ddl-auto: create-drop
+      properties:
+        hibernate:
+          show_sql: true
+          format_sql: true
+          use_sql: true
+
+  # Configurações de erro
+  server:
+    error:
+      include-message: always
+      include-binding-errors: always
+      include-stacktrace: never
+      include-exception: false
+
+  # Integração ViaCEP
+  viacep:
+    url: https://viacep.com.br/ws
+
+  # Integração BrasilApi
+  brasilapi:
+    url: https://brasilapi.com.br
+
+  # Integração Receita Federal do Brasil
+  receitafederal:
+    url: https://receitaws.com.br
