@@ -2,7 +2,6 @@ package br.com.uniesp.assistencia.internal.cliente.entity;
 
 import br.com.uniesp.assistencia.internal.equipamento.entity.EquipamentoEntity;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Pattern;
 import lombok.*;
 
 import java.util.List;
